@@ -1,0 +1,63 @@
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="/stylesheets/ajaxtabs.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+</script>
+<h1>Manage content</h1>
+
+<%= render :partial => 'page_header' %>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Public and Private items</a></li>
+		<li><a href="#tabs-2">Private items only</a></li>
+	</ul>
+    <div id="tabs-1">
+        <%= render :partial => 'bread_crumbs' %>
+      <% if session[:root] %>
+          <br/><br/>
+        New?  &nbsp;&nbsp;
+          <% if @root_node.get_name == 'Assignments' %>
+            <%= render :partial => '/tree_display/actions/assignments_folder_actions' %>
+          <% end %>
+          <% if @root_node.get_name == 'Courses' %>
+            <%= render :partial => '/tree_display/actions/courses_folder_actions' %>
+          <% end %>
+          <% if @root_node.get_name == 'Review' || @root_node.get_name == 'Metareview' || @root_node.get_name == 'Teammate Review' || @root_node.get_name == 'Author Feedback' || @root_node.get_name == 'Global Survey' || @root_node.get_name == 'Survey' || @root_node.get_name == 'Course Evaluation'%>
+              <%= render :partial => '/tree_display/actions/questionnaire_types_actions',:locals => {:node => @root_node} %>
+          <% end %>
+      <% end %>
+     <%= render :partial => 'page_footer' %>
+
+    </div>
+  <div id="tabs-2">
+    <%= render :partial => 'bread_crumbs' %>
+
+    <% if session[:root] %>
+        <br/><br/>
+      New?    &nbsp;&nbsp;
+        <% if @root_node.get_name == 'Assignments' %>
+          <%= render :partial => '/tree_display/actions/assignments_folder_actions' %>
+        <% end %>
+        <% if @root_node.get_name == 'Courses' %>
+          <%= render :partial => '/tree_display/actions/courses_folder_actions' %>
+        <% end %>
+        <% if @root_node.get_name == 'Review' || @root_node.get_name == 'Metareview' || @root_node.get_name == 'Teammate Review' || @root_node.get_name == 'Author Feedback' || @root_node.get_name == 'Global Survey' || @root_node.get_name == 'Survey' || @root_node.get_name == 'Course Evaluation'%>
+            <%= render :partial => '/tree_display/actions/questionnaire_types_actions',:locals => {:node => @root_node} %>
+        <% end %>
+    <% end %>
+
+    <%= render :partial => 'page_footer' %>
+  </div>
+</div>
+
+
+
+
+<div style="padding: 15px">
+ <%= render :partial => '/shared_scripts/back' %>
+</div>
