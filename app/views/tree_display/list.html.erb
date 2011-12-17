@@ -20,7 +20,9 @@
         <%= render :partial => 'bread_crumbs' %>
       <% if session[:root] %>
           <br/><br/>
-        New?  &nbsp;&nbsp;
+         <% if ! (@root_node.get_name == 'Questionnaires') %>
+        New?    &nbsp;&nbsp;
+        <% end %>
           <% if @root_node.get_name == 'Assignments' %>
             <%= render :partial => '/tree_display/actions/assignments_folder_actions' %>
           <% end %>
@@ -39,7 +41,9 @@
 
     <% if session[:root] %>
         <br/><br/>
-      New?    &nbsp;&nbsp;
+        <% if ! (@root_node.get_name == 'Questionnaires') %>
+        New?    &nbsp;&nbsp;
+        <% end %>
         <% if @root_node.get_name == 'Assignments' %>
           <%= render :partial => '/tree_display/actions/assignments_folder_actions' %>
         <% end %>

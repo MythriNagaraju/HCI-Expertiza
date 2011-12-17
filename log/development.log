@@ -10446,3 +10446,178 @@ Authorised? true
 Rendering template within layouts/application
 Rendering tree_display/list
 Completed in 283ms (View: 116, DB: 28) | 200 OK [http://localhost/tree_display/list]
+DEPRECATION WARNING: Kernel#returning has been deprecated in favor of Object#tap. (called from enable_activerecord at C:/Users/Mythri/RubymineProjects/HCI/vendor/plugins/will_paginate/lib/will_paginate.rb:39)
+** [Hoptoad] Notifier 2.4.11 ready to catch errors
+
+
+Processing ContentPagesController#view_default (for 127.0.0.1 at 2011-12-11 21:45:23) [GET]
+  Parameters: {"action"=>"view_default", "controller"=>"content_pages"}
+(Role still current)
+(Logged-in user)
+Session: time expired
+Redirected to http://localhost:3000/expired
+Filter chain halted as [:goldberg_security_filter] rendered_or_redirected.
+Completed in 978ms (DB: 35) | 302 Found [http://localhost/]
+
+
+Processing ContentPagesController#view (for 127.0.0.1 at 2011-12-11 21:45:24) [GET]
+  Parameters: {"action"=>"view", "page_name"=>["expired"], "controller"=>"content_pages"}
+Page: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering content_pages/view
+Completed in 2780ms (View: 144, DB: 574) | 200 OK [http://localhost/expired]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2011-12-11 21:45:35) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"W+1THITmESEcSiXCs6cBaowcDj5j79r/FKK4BqXq1TY=", "controller"=>"auth", "login"=>{"name"=>"admin", "password"=>"[FILTERED]"}}
+Action: authorised
+Authorised? true
+User admin successfully logged in
+Logging in user as role Credentials
+Redirected to http://localhost:3000/tree_display/drill
+Completed in 247ms (DB: 27) | 302 Found [http://localhost/auth/login]
+
+
+Processing TreeDisplayController#drill (for 127.0.0.1 at 2011-12-11 21:45:35) [GET]
+  Parameters: {"action"=>"drill", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Redirected to http://localhost:3000/tree_display/list
+Completed in 197ms (DB: 18) | 302 Found [http://localhost/tree_display/drill]
+
+
+Processing TreeDisplayController#list (for 127.0.0.1 at 2011-12-11 21:45:36) [GET]
+  Parameters: {"action"=>"list", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering tree_display/list
+Completed in 2018ms (View: 1575, DB: 78) | 200 OK [http://localhost/tree_display/list]
+
+
+Processing MenuItemsController#link (for 127.0.0.1 at 2011-12-11 21:45:58) [GET]
+  Parameters: {"name"=>["manage", "questionnaires", "review rubrics"], "action"=>"link", "controller"=>"menu_items"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Redirected to http://localhost:3000/tree_display/goto_review_rubrics
+Completed in 203ms (DB: 17) | 302 Found [http://localhost/menu/manage/questionnaires/review%20rubrics]
+
+
+Processing TreeDisplayController#goto_review_rubrics (for 127.0.0.1 at 2011-12-11 21:45:59) [GET]
+  Parameters: {"action"=>"goto_review_rubrics", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Redirected to http://localhost:3000/tree_display/list
+Completed in 261ms (DB: 30) | 302 Found [http://localhost/tree_display/goto_review_rubrics]
+
+
+Processing TreeDisplayController#list (for 127.0.0.1 at 2011-12-11 21:45:59) [GET]
+  Parameters: {"action"=>"list", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering tree_display/list
+Completed in 642ms (View: 121, DB: 49) | 200 OK [http://localhost/tree_display/list]
+
+
+Processing TreeDisplayController#list (for 127.0.0.1 at 2011-12-11 21:47:13) [GET]
+  Parameters: {"action"=>"list", "controller"=>"tree_display"}
+Action: NOT authorised
+Authorised? false
+Redirected to http://localhost:3000/denied
+Filter chain halted as [:goldberg_security_filter] rendered_or_redirected.
+Completed in 19809ms (DB: 516) | 302 Found [http://localhost/tree_display/list]
+
+
+Processing ContentPagesController#view (for 127.0.0.1 at 2011-12-11 21:47:34) [GET]
+  Parameters: {"action"=>"view", "page_name"=>["denied"], "controller"=>"content_pages"}
+(Role still current)
+Page: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering content_pages/view
+Completed in 120ms (View: 22, DB: 12) | 200 OK [http://localhost/denied]
+
+
+Processing AuthController#login (for 127.0.0.1 at 2011-12-11 21:47:43) [POST]
+  Parameters: {"commit"=>"Login", "action"=>"login", "authenticity_token"=>"Lk6aNdP5TxKIv3+5kXTxhXvdOvHBjzvINOch9RnfMxQ=", "controller"=>"auth", "login"=>{"name"=>"admin", "password"=>"[FILTERED]"}}
+(Role still current)
+Action: authorised
+Authorised? true
+User admin successfully logged in
+Logging in user as role Credentials
+Redirected to http://localhost:3000/tree_display/drill
+Completed in 115ms (DB: 18) | 302 Found [http://localhost/auth/login]
+
+
+Processing TreeDisplayController#drill (for 127.0.0.1 at 2011-12-11 21:47:43) [GET]
+  Parameters: {"action"=>"drill", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Redirected to http://localhost:3000/tree_display/list
+Completed in 168ms (DB: 9) | 302 Found [http://localhost/tree_display/drill]
+
+
+Processing TreeDisplayController#list (for 127.0.0.1 at 2011-12-11 21:47:43) [GET]
+  Parameters: {"action"=>"list", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering tree_display/list
+Completed in 747ms (View: 592, DB: 54) | 200 OK [http://localhost/tree_display/list]
+
+
+Processing MenuItemsController#link (for 127.0.0.1 at 2011-12-11 21:48:02) [GET]
+  Parameters: {"name"=>["manage", "questionnaires", "review rubrics"], "action"=>"link", "controller"=>"menu_items"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Redirected to http://localhost:3000/tree_display/goto_review_rubrics
+Completed in 212ms (DB: 41) | 302 Found [http://localhost/menu/manage/questionnaires/review%20rubrics]
+
+
+Processing TreeDisplayController#goto_review_rubrics (for 127.0.0.1 at 2011-12-11 21:48:02) [GET]
+  Parameters: {"action"=>"goto_review_rubrics", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Redirected to http://localhost:3000/tree_display/list
+Completed in 122ms (DB: 20) | 302 Found [http://localhost/tree_display/goto_review_rubrics]
+
+
+Processing TreeDisplayController#list (for 127.0.0.1 at 2011-12-11 21:48:03) [GET]
+  Parameters: {"action"=>"list", "controller"=>"tree_display"}
+(Role still current)
+(Logged-in user)
+Session: time NOT expired
+Action: authorised
+Authorised? true
+Rendering template within layouts/application
+Rendering tree_display/list
+Completed in 302ms (View: 50, DB: 28) | 200 OK [http://localhost/tree_display/list]
